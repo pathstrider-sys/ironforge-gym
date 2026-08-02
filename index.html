@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRONFORGE GYM | Unleash Your Potential — New York City</title>
+<meta name="description" content="New York City's premier fitness destination. Expert trainers, world-class equipment, and proven results at Ironforge Gym, Midtown Manhattan.">
+<meta name="theme-color" content="#0a0a0a">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--r:#e63946;--o:#ff6b35;--bg:#0a0a0a;--bg2:#111;--card:#1a1a1a;--t:#fff;--t2:#aaa;--bd:#2a2a2a}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--t);overflow-x:hidden}
+body.menu-open{overflow:hidden;position:fixed;width:100%}
+#ls{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;transition:opacity .6s,visibility .6s}
+#ls.h{opacity:0;visibility:hidden}
+.ll{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:3.5rem;letter-spacing:6px;margin-bottom:2rem}
+.ll span{color:var(--r)}
+.lb{width:220px;height:4px;background:var(--bd);border-radius:2px;overflow:hidden}
+.lp{height:100%;width:0;background:linear-gradient(90deg,var(--r),var(--o));animation:lf 2s ease forwards}
+@keyframes lf{to{width:100%}}
+#ab{background:linear-gradient(90deg,var(--r),var(--o));color:#fff;text-align:center;padding:10px 50px;font-size:.85rem;font-weight:600;position:relative;z-index:1001}
+#ab.h{display:none}
+.bx{position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:1.1rem;cursor:pointer}
+#nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:18px 0;background:transparent;transition:all .3s}
+#nav.sc{background:rgba(10,10,10,.97);padding:12px 0;box-shadow:0 2px 20px rgba(0,0,0,.6)}
+.nc{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:1.9rem;letter-spacing:3px;color:var(--t);text-decoration:none}
+.logo span{color:var(--r)}
+.nl{display:flex;gap:1.8rem;list-style:none}
+.nl a{color:var(--t2);text-decoration:none;font-family:'Arial Narrow',Arial,sans-serif;font-size:.88rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .3s;position:relative}
+.nl a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--r);transition:width .3s}
+.nl a:hover,.nl a.on{color:var(--t)}
+.nl a:hover::after,.nl a.on::after{width:100%}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hbg span{display:block;width:26px;height:2px;background:#fff;transition:all .3s}
+.hbg.o span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hbg.o span:nth-child(2){opacity:0}
+.hbg.o span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mm{display:none;position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem;overflow-y:auto;-webkit-overflow-scrolling:touch}
+#mm.o{display:flex}
+#mm a{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:2.8rem;letter-spacing:4px;color:#fff;text-decoration:none;transition:color .3s}
+#mm a:hover{color:var(--r)}
+section{padding:85px 24px}
+.ctr{max-width:1200px;margin:0 auto}
+.sl{font-family:'Arial Narrow',Arial,sans-serif;font-size:.78rem;letter-spacing:4px;text-transform:uppercase;color:var(--r);margin-bottom:10px}
+.st{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:clamp(2.5rem,6vw,4rem);letter-spacing:2px;line-height:1;margin-bottom:18px}
+.ss{color:var(--t2);font-size:.97rem;line-height:1.75;max-width:600px;margin-bottom:50px}
+.dv{width:55px;height:3px;background:linear-gradient(90deg,var(--r),var(--o));margin-bottom:45px}
+.rv{opacity:0;transform:translateY(35px);transition:opacity .65s,transform .65s}
+.rv.v{opacity:1;transform:none}
+.rl{opacity:0;transform:translateX(-40px);transition:opacity .65s,transform .65s}
+.rl.v{opacity:1;transform:none}
+.rr{opacity:0;transform:translateX(40px);transition:opacity .65s,transform .65s}
+.rr.v{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv,.rl,.rr{opacity:1;transform:none;transition:none}}
+#home{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,#0a0a0a 0%,#180505 60%,#0a0a0a 100%);position:relative;overflow:hidden;padding-top:140px}
+#home::before{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background:linear-gradient(135deg,transparent,rgba(230,57,70,.06),rgba(255,107,53,.04));pointer-events:none}
+#home::after{content:'';position:absolute;top:20%;right:5%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(230,57,70,.08),transparent 70%);pointer-events:none}
+.hc{position:relative;z-index:1;max-width:700px}
+.he{font-family:'Arial Narrow',Arial,sans-serif;font-size:.85rem;letter-spacing:5px;text-transform:uppercase;color:var(--r);margin-bottom:18px}
+.ht{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:clamp(4rem,13vw,8.5rem);line-height:.9;letter-spacing:2px;margin-bottom:28px}
+.ht span{color:var(--r);display:block}
+.hs{color:var(--t2);font-size:1.05rem;line-height:1.75;max-width:500px;margin-bottom:38px}
+.bp{display:inline-block;padding:15px 38px;background:var(--r);color:#fff;text-decoration:none;font-family:'Arial Narrow',Arial,sans-serif;font-size:.95rem;letter-spacing:2px;text-transform:uppercase;border:2px solid var(--r);transition:all .3s;cursor:pointer}
+.bp:hover{background:transparent;color:var(--r)}
+.bo{display:inline-block;padding:15px 38px;background:transparent;color:#fff;text-decoration:none;font-family:'Arial Narrow',Arial,sans-serif;font-size:.95rem;letter-spacing:2px;text-transform:uppercase;border:2px solid var(--bd);transition:all .3s;cursor:pointer}
+.bo:hover{border-color:var(--r);color:var(--r)}
+.hb{display:flex;flex-wrap:wrap;gap:14px}
+.hst{display:flex;gap:40px;margin-top:55px;flex-wrap:wrap}
+.hn{border-left:3px solid var(--r);padding-left:14px}
+.hn-n{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:2.6rem;line-height:1}
+.hn-l{font-size:.78rem;color:var(--t2);text-transform:uppercase;letter-spacing:1px}
+#about{background:var(--bg2)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.ai{position:relative}
+.ai::before{content:'';position:absolute;top:-14px;left:-14px;right:14px;bottom:14px;border:2px solid var(--r)}
+.aph{position:relative;z-index:1;width:100%;height:490px;background:linear-gradient(135deg,#0d0505 0%,#1a0808 40%,#0a0a0a 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;overflow:hidden}
+.aph::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:200px;height:200px;border-radius:50%;border:3px solid rgba(230,57,70,.15)}
+.aph::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:140px;height:140px;border-radius:50%;border:2px solid rgba(230,57,70,.1)}
+.aph-ico{font-size:4rem;position:relative;z-index:1}
+.aph-lbl{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:1.2rem;letter-spacing:4px;color:rgba(230,57,70,.6);position:relative;z-index:1}
+.asc{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px}
+.sc{background:var(--card);padding:24px;border-bottom:3px solid var(--r)}
+.sn{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:3rem;color:var(--r);line-height:1}
+.sl2{color:var(--t2);font-size:.82rem;text-transform:uppercase;letter-spacing:1px;margin-top:5px}
+#gallery{background:var(--bg)}
+.gg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gi{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:1}
+.gph{width:100%;height:100%;transition:transform .45s;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;position:absolute;inset:0;padding-bottom:16px}
+.gph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.gph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.15) 55%,rgba(0,0,0,.35) 100%);z-index:1}
+.gph-ico,.gph-lbl{position:relative;z-index:2}
+.gi:hover .gph{transform:scale(1.09)}
+.gph-ico{font-size:2.5rem;filter:drop-shadow(0 0 8px rgba(230,57,70,.4))}
+.gph-lbl{font-family:'Arial Narrow',Arial,sans-serif;font-size:.65rem;letter-spacing:4px;color:rgba(255,255,255,.4);text-transform:uppercase}
+.go{position:absolute;inset:0;background:rgba(230,57,70,.35);opacity:0;transition:opacity .3s;display:flex;align-items:center;justify-content:center;font-size:2rem}
+.gi:hover .go{opacity:1}
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:5000;align-items:center;justify-content:center}
+#lb.a{display:flex}
+#lb-c{position:absolute;top:18px;right:22px;color:#fff;font-size:2.2rem;cursor:pointer;background:none;border:none;line-height:1}
+#lb-img{max-width:92%;max-height:90vh;object-fit:contain;border-radius:4px}
+#services{background:var(--bg2)}
+.svg{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:24px}
+.svc{background:var(--card);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-8px);box-shadow:0 22px 45px rgba(230,57,70,.2)}
+.sph{width:100%;height:215px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden}
+.sph::before{content:'';position:absolute;inset:0;opacity:.6}
+.sph-ico{font-size:3rem;position:relative;z-index:1;filter:drop-shadow(0 4px 8px rgba(0,0,0,.5))}
+.sph-lbl{font-family:'Arial Narrow',Arial,sans-serif;font-size:.65rem;letter-spacing:3px;color:rgba(255,255,255,.5);text-transform:uppercase;position:relative;z-index:1}
+.sb{padding:24px}
+.si{font-size:1.6rem;margin-bottom:10px}
+.st2{font-family:'Arial Narrow',Arial,sans-serif;font-size:1.15rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.sd{color:var(--t2);font-size:.9rem;line-height:1.65}
+#schedule{background:var(--bg)}
+.sw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tb{width:100%;min-width:580px;border-collapse:collapse}
+.tb th{background:var(--r);color:#fff;padding:14px 18px;font-family:'Arial Narrow',Arial,sans-serif;font-size:.88rem;letter-spacing:2px;text-transform:uppercase;text-align:left}
+.tb td{padding:14px 18px;border-bottom:1px solid var(--bd);color:var(--t2);font-size:.9rem}
+.tb tr:nth-child(even) td{background:var(--card)}
+.tb tr:hover td{background:rgba(230,57,70,.05)}
+.tb td:first-child{color:var(--t);font-family:'Arial Narrow',Arial,sans-serif;font-weight:600;letter-spacing:1px}
+#pricing{background:var(--bg2)}
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:24px}
+.pc{background:var(--card);padding:38px 32px;border:2px solid var(--bd);position:relative;transition:all .3s}
+.pc.f{border-color:var(--r)}
+.pc:hover{border-color:var(--r);transform:translateY(-5px)}
+.fb{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--r);color:#fff;font-family:'Arial Narrow',Arial,sans-serif;font-size:.75rem;letter-spacing:2px;padding:4px 18px;text-transform:uppercase;white-space:nowrap}
+.pn{font-family:'Arial Narrow',Arial,sans-serif;font-size:.88rem;letter-spacing:3px;text-transform:uppercase;color:var(--r);margin-bottom:14px}
+.pp{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:3.5rem;line-height:1;margin-bottom:4px}
+.pper{color:var(--t2);font-size:.85rem;margin-bottom:28px}
+.pf{list-style:none;margin-bottom:32px}
+.pf li{padding:10px 0;border-bottom:1px solid var(--bd);color:var(--t2);font-size:.9rem;display:flex;align-items:center;gap:10px}
+.pf li::before{content:'✓';color:var(--r);font-weight:700;flex-shrink:0}
+#testimonials{background:var(--bg)}
+.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.tc{background:var(--card);padding:32px;border-top:3px solid var(--r)}
+.ts{color:var(--o);font-size:1.05rem;margin-bottom:18px;letter-spacing:3px}
+.tt{color:var(--t2);font-size:.95rem;line-height:1.7;margin-bottom:24px;font-style:italic}
+.ta{display:flex;align-items:center;gap:14px}
+.tav{width:50px;height:50px;border-radius:50%;border:2px solid var(--r);flex-shrink:0;overflow:hidden}
+.tn{font-family:'Arial Narrow',Arial,sans-serif;font-size:.95rem;letter-spacing:1px}
+.tr{color:var(--t2);font-size:.8rem}
+#faq{background:var(--bg2)}
+.fl{max-width:800px;margin:0 auto}
+.fi{border-bottom:1px solid var(--bd)}
+.fq{width:100%;display:flex;justify-content:space-between;align-items:center;padding:22px 0;background:none;border:none;color:#fff;font-family:'Arial Narrow',Arial,sans-serif;font-size:1rem;letter-spacing:.5px;cursor:pointer;text-align:left;gap:20px}
+.fic{font-size:1.4rem;color:var(--r);flex-shrink:0;line-height:1}
+.fa{max-height:0;overflow:hidden;transition:max-height .4s}
+.fa p{padding-bottom:22px;color:var(--t2);font-size:.95rem;line-height:1.7}
+.fi.op .fa{max-height:400px}
+#bmi{background:var(--bg)}
+.bmc{max-width:500px;margin:0 auto;background:var(--card);padding:44px;border:1px solid var(--bd)}
+.bmi{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+.bf label{display:block;font-family:'Arial Narrow',Arial,sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--t2);margin-bottom:8px}
+.bf input{width:100%;padding:14px;background:var(--bg2);border:1px solid var(--bd);color:#fff;font-size:1rem;outline:none;transition:border-color .3s}
+.bf input:focus{border-color:var(--r)}
+.bf input::placeholder{color:var(--t2)}
+#br{margin-top:22px;padding:22px;background:var(--bg2);text-align:center;display:none}
+.bv{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:3.5rem;line-height:1;margin-bottom:6px}
+.bc{font-family:'Arial Narrow',Arial,sans-serif;font-size:1rem;letter-spacing:2px;text-transform:uppercase}
+#contact{background:var(--bg2)}
+.cg{display:grid;grid-template-columns:1fr 1.5fr;gap:65px;align-items:start}
+.ch3{font-family:Impact,'Arial Black',Arial,sans-serif;font-size:2.5rem;letter-spacing:2px;margin-bottom:28px}
+.ci{display:flex;align-items:flex-start;gap:14px;margin-bottom:24px}
+.cic{font-size:1.3rem;color:var(--r);flex-shrink:0;margin-top:2px}
+.clb{font-family:'Arial Narrow',Arial,sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--r);margin-bottom:3px}
+.cv{color:var(--t2);font-size:.94rem;line-height:1.55}
+.cf{display:flex;flex-direction:column;gap:18px}
+.fg input,.fg textarea{width:100%;padding:15px 18px;background:var(--card);border:1px solid var(--bd);color:#fff;font-size:.95rem;font-family:system-ui,Arial,sans-serif;outline:none;transition:border-color .3s}
+.fg input:focus,.fg textarea:focus{border-color:var(--r)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--t2)}
+.fg textarea{height:140px;resize:vertical}
+#fs{display:none;padding:14px;background:rgba(39,174,96,.12);border:1px solid rgba(39,174,96,.35);color:#2ecc71;font-size:.9rem;text-align:center}
+#map{background:var(--bg);padding:0}
+.mh{padding:65px 24px 40px;text-align:center}
+.mf{width:100%;height:420px;border:none;display:block}
+#footer{background:#060606;padding:55px 24px 30px}
+.fgr{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto 40px}
+.fd{color:var(--t2);font-size:.9rem;line-height:1.65;max-width:280px;margin-top:14px}
+.ftt{font-family:'Arial Narrow',Arial,sans-serif;font-size:.82rem;letter-spacing:3px;text-transform:uppercase;color:var(--r);margin-bottom:18px}
+.fli{list-style:none;display:flex;flex-direction:column;gap:11px}
+.fli a{color:var(--t2);text-decoration:none;font-size:.9rem;transition:color .3s}
+.fli a:hover{color:var(--r)}
+.fso{display:flex;gap:10px;margin-top:18px}
+.sb2{width:40px;height:40px;border-radius:50%;background:var(--card);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .3s}
+.sb2:hover{background:var(--r);border-color:var(--r);transform:translateY(-3px)}
+.sb2 svg{width:16px;height:16px;fill:#fff}
+.fb2{border-top:1px solid var(--bd);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;max-width:1200px;margin:0 auto}
+.fb2 p{color:var(--t2);font-size:.84rem}
+#wa{position:fixed;bottom:25px;left:25px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:997;text-decoration:none;box-shadow:0 4px 15px rgba(37,211,102,.4);animation:wp 2.5s infinite}
+#wa svg{width:28px;height:28px;fill:#fff}
+.wat{position:absolute;right:65px;background:#fff;color:#333;padding:6px 12px;border-radius:6px;font-size:.8rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+#wa:hover .wat{opacity:1}
+@keyframes wp{0%,100%{box-shadow:0 4px 15px rgba(37,211,102,.4)}50%{box-shadow:0 4px 32px rgba(37,211,102,.75)}}
+#st{position:fixed;bottom:95px;right:25px;width:46px;height:46px;background:var(--r);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:996;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;box-shadow:0 4px 15px rgba(230,57,70,.4)}
+#st.v{opacity:1;visibility:visible}
+#st:hover{background:var(--o);transform:translateY(-3px)}
+#st svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:900px){.ag{grid-template-columns:1fr}.ai{display:none}.cg{grid-template-columns:1fr}.fgr{grid-template-columns:1fr 1fr}.gg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.nl{display:none}.hbg{display:flex}section{padding:60px 20px}.ht{font-size:clamp(3.2rem,16vw,6rem)}.fgr{grid-template-columns:1fr}.bmi{grid-template-columns:1fr}.hb{flex-direction:column}.pg,.tg,.svg{grid-template-columns:1fr}}
+@media(max-width:480px){.gg{grid-template-columns:1fr}.asc{grid-template-columns:1fr 1fr}}
+</style>
+<!-- ===== Analytics (free, zero backend) =====
+     Replace G-XXXXXXXXXX with your own free GA4 Measurement ID.
+     Get one at analytics.google.com → Admin → Create Property → Data Streams → Web
+     This script is async and tiny — negligible PageSpeed impact. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+</head>
+<body>
+
+<div id="ls"><div class="ll">IRON<span>FORGE</span></div><div class="lb"><div class="lp"></div></div></div>
+
+<div id="ab"><span id="gym-urgency">🔥 LIMITED OFFER: Join This Month and Get First Month FREE! Call Now: +1 (212) 555-0142</span> <button class="bx" onclick="document.getElementById('ab').classList.add('h')" aria-label="Close">✕</button></div>
+
+<div id="pitch-greeting" style="display:none;background:#111;color:#fff;text-align:center;padding:10px 16px;font-size:13px;border-bottom:1px solid #2a2a2a">
+  <span id="pitch-greeting-text"></span>
+  <button onclick="document.getElementById('pitch-greeting').style.display='none'" aria-label="Close" style="background:none;border:none;color:#999;margin-left:10px;cursor:pointer;font-size:13px">✕</button>
+</div>
+
+<nav id="nav">
+<div class="nc">
+<a href="#home" class="logo" id="nav-logo-wrap"><img id="gym-logo-img" style="display:none;height:32px;vertical-align:middle" alt="Gym logo"><span id="nav-logo-text">IRON<span>FORGE</span></span></a>
+<ul class="nl">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#schedule">Schedule</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button class="hbg" id="hbg" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
+
+<div id="mm">
+<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#about" onclick="closeMenu()">About</a>
+<a href="#gallery" onclick="closeMenu()">Gallery</a>
+<a href="#services" onclick="closeMenu()">Services</a>
+<a href="#schedule" onclick="closeMenu()">Schedule</a>
+<a href="#pricing" onclick="closeMenu()">Pricing</a>
+<a href="#faq" onclick="closeMenu()">FAQ</a>
+<a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<section id="home">
+<div class="ctr">
+<div class="hc rv">
+<p class="he" id="gym-location">New York City's Premier Fitness Destination</p>
+<h1 class="ht" id="gym-title">FORGE YOUR <span>LEGACY</span></h1>
+<p class="hs">Transform your body, strengthen your mind, and unleash your true potential at Ironforge Gym — Midtown Manhattan's most elite training facility.</p>
+<p id="gym-offer" style="display:none;color:var(--r);font-weight:700;font-size:.95rem;letter-spacing:1px;margin-top:-8px;margin-bottom:12px"></p>
+<div class="hb"><a href="#pricing" class="bp">Join Now</a><a href="#services" class="bo">Explore Services</a></div>
+<div class="hst">
+<div class="hn"><div class="hn-n">500+</div><div class="hn-l">Active Members</div></div>
+<div class="hn"><div class="hn-n">15</div><div class="hn-l">Expert Trainers</div></div>
+<div class="hn"><div class="hn-n">8</div><div class="hn-l">Years Strong</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="ctr">
+<div class="ag">
+<div class="ai rv">
+<div class="aph">
+<div class="aph-ico">🏋️</div>
+<div class="aph-lbl">IRONFORGE GYM</div>
+</div>
+</div>
+<div class="rr">
+<p class="sl">Who We Are</p>
+<h2 class="st">MORE THAN A GYM</h2>
+<div class="dv"></div>
+<p class="ss">Founded in 2017, Ironforge Gym is New York City's premier fitness destination. We combine cutting-edge equipment with world-class coaching to help you achieve goals you never thought possible.</p>
+<p style="color:var(--t2);line-height:1.75;font-size:.95rem;">Whether you're a complete beginner or a seasoned athlete, our certified trainers design personalised programs that deliver real, measurable results. We don't just build bodies — we build champions.</p>
+<div class="asc">
+<div class="sc"><div class="sn counter" data-target="500">0</div><div class="sl2">Active Members</div></div>
+<div class="sc"><div class="sn counter" data-target="15">0</div><div class="sl2">Expert Trainers</div></div>
+<div class="sc"><div class="sn counter" data-target="30">0</div><div class="sl2">Weekly Classes</div></div>
+<div class="sc"><div class="sn counter" data-target="8">0</div><div class="sl2">Years Experience</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="ctr">
+<p class="sl rv">Our Facility</p>
+<h2 class="st rv">INSIDE THE FORGE</h2>
+<div class="dv"></div>
+<div class="gg">
+<div class="gi rv" onclick="openLb('weights')"><div class="gph" style="background:linear-gradient(135deg,#0d0505,#1a0808,#0a0a0a)"><img src="images/gallery-1-free-weights.webp" width="700" height="700" loading="lazy" alt="Free weights rack at Ironforge Gym"><div class="gph-ico">🏋️</div><div class="gph-lbl">FREE WEIGHTS</div></div><div class="go">🔍</div></div>
+<div class="gi rv" onclick="openLb('cardio')"><div class="gph" style="background:linear-gradient(135deg,#050d05,#081a08,#0a0a0a)"><img src="images/gallery-2-cardio-zone.webp" width="700" height="700" loading="lazy" alt="Cardio zone with treadmills at Ironforge Gym"><div class="gph-ico">🏃</div><div class="gph-lbl">CARDIO ZONE</div></div><div class="go">🔍</div></div>
+<div class="gi rv" onclick="openLb('interior')"><div class="gph" style="background:linear-gradient(135deg,#05050d,#08081a,#0a0a0a)"><img src="images/gallery-3-gym-interior.webp" width="700" height="700" loading="lazy" alt="Gym interior at Ironforge Gym"><div class="gph-ico">🏢</div><div class="gph-lbl">GYM INTERIOR</div></div><div class="go">🔍</div></div>
+<div class="gi rv" onclick="openLb('training')"><div class="gph" style="background:linear-gradient(135deg,#0d0a05,#1a1205,#0a0a0a)"><img src="images/gallery-4-weight-training.webp" width="700" height="700" loading="lazy" alt="Weight training at Ironforge Gym"><div class="gph-ico">💪</div><div class="gph-lbl">WEIGHT TRAINING</div></div><div class="go">🔍</div></div>
+<div class="gi rv" onclick="openLb('personal')"><div class="gph" style="background:linear-gradient(135deg,#0d0505,#200808,#0a0a0a)"><img src="images/gallery-5-personal-training.webp" width="700" height="700" loading="lazy" alt="Personal training at Ironforge Gym"><div class="gph-ico">🎯</div><div class="gph-lbl">PERSONAL TRAINING</div></div><div class="go">🔍</div></div>
+<div class="gi rv" onclick="openLb('functional')"><div class="gph" style="background:linear-gradient(135deg,#050a0d,#05101a,#0a0a0a)"><img src="images/gallery-6-functional-zone.webp" width="700" height="700" loading="lazy" alt="Functional training zone at Ironforge Gym"><div class="gph-ico">⚡</div><div class="gph-lbl">FUNCTIONAL ZONE</div></div><div class="go">🔍</div></div>
+</div>
+</div>
+</section>
+
+<div id="lb" onclick="closeLb()">
+<button id="lb-c" onclick="closeLb()">✕</button>
+<div id="lb-img" style="text-align:center;padding:40px">
+<div style="font-size:6rem;margin-bottom:20px" id="lb-ico"></div>
+<div style="font-family:'Arial Narrow',Arial,sans-serif;font-size:1.5rem;letter-spacing:4px;color:var(--r)" id="lb-lbl"></div>
+<p style="color:var(--t2);margin-top:12px;font-size:.85rem">Contact us to schedule a tour of our facility</p>
+</div>
+</div>
+
+<section id="services">
+<div class="ctr">
+<p class="sl rv">What We Offer</p>
+<h2 class="st rv">OUR PROGRAMS</h2>
+<div class="dv"></div>
+<p class="ss rv">Expert-designed programs for every fitness level, backed by science and delivered by certified professionals.</p>
+<div class="svg">
+<div class="svc rv">
+<div class="sph" style="background:linear-gradient(135deg,#0d0505,#1a0808)"><div class="sph-ico">💪</div><div class="sph-lbl">STRENGTH</div></div>
+<div class="sb"><div class="st2">Strength Training</div><p class="sd">Build raw power with state-of-the-art free weights, cable systems, and barbells. Programs for all levels from beginner to competitive powerlifter.</p></div>
+</div>
+<div class="svc rv">
+<div class="sph" style="background:linear-gradient(135deg,#050d05,#081a08)"><div class="sph-ico">🏃</div><div class="sph-lbl">CARDIO</div></div>
+<div class="sb"><div class="st2">Cardio Zone</div><p class="sd">Burn fat and boost endurance with treadmills, cycles, rowing machines, and dedicated HIIT stations in our premium cardio zone.</p></div>
+</div>
+<div class="svc rv">
+<div class="sph" style="background:linear-gradient(135deg,#05050d,#08081a)"><div class="sph-ico">🧘</div><div class="sph-lbl">YOGA</div></div>
+<div class="sb"><div class="st2">Yoga & Flexibility</div><p class="sd">Find balance in our dedicated yoga studio with daily sessions for all levels. Improve flexibility, reduce stress, and enhance recovery.</p></div>
+</div>
+<div class="svc rv">
+<div class="sph" style="background:linear-gradient(135deg,#0d0a05,#1a1205)"><div class="sph-ico">🏆</div><div class="sph-lbl">PERSONAL</div></div>
+<div class="sb"><div class="st2">Personal Training</div><p class="sd">One-on-one coaching with certified trainers. Customised nutrition plans and training programs built specifically around your goals.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="schedule">
+<div class="ctr">
+<p class="sl rv">Weekly Timetable</p>
+<h2 class="st rv">CLASS SCHEDULE</h2>
+<div class="dv"></div>
+<div class="sw rv">
+<table class="tb">
+<thead><tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th></tr></thead>
+<tbody>
+<tr><td>Monday</td><td>Strength 6AM · Yoga 8AM</td><td>Open Training</td><td>Cardio Blast 6PM</td></tr>
+<tr><td>Tuesday</td><td>Personal Training 7AM</td><td>Open Training</td><td>HIIT 5PM</td></tr>
+<tr><td>Wednesday</td><td>Strength 6AM · Yoga 8AM</td><td>Open Training</td><td>Boxing 6PM</td></tr>
+<tr><td>Thursday</td><td>Personal Training 7AM</td><td>Open Training</td><td>Pilates 7PM</td></tr>
+<tr><td>Friday</td><td>Strength 6AM · Yoga 8AM</td><td>Open Training</td><td>HIIT 6PM</td></tr>
+<tr><td>Saturday</td><td>All Classes 8AM–2PM</td><td>Open Training</td><td>Open Training</td></tr>
+<tr><td>Sunday</td><td>Rest Day</td><td>Open Gym 10AM–2PM</td><td>Closed</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="pricing">
+<div class="ctr">
+<p class="sl rv">Membership Plans</p>
+<h2 class="st rv">CHOOSE YOUR PLAN</h2>
+<div class="dv"></div>
+<p class="ss rv">No hidden fees. No lock-in contracts. Cancel anytime with 30 days notice.</p>
+<div class="pg">
+<div class="pc rv"><div class="pn">Basic</div><div class="pp">$59</div><div class="pper">per month</div><ul class="pf"><li>Full Gym Access</li><li>Cardio Zone</li><li>Locker Room Access</li><li>2 Group Classes/Month</li><li>Mobile App Access</li></ul><a href="#contact" class="bp" style="display:block;text-align:center">Get Started</a></div>
+<div class="pc f rv"><div class="fb">Most Popular</div><div class="pn">Pro</div><div class="pp">$99</div><div class="pper">per month</div><ul class="pf"><li>Everything in Basic</li><li>Unlimited Group Classes</li><li>1 Personal Training/Month</li><li>Nutrition Consultation</li><li>2 Guest Passes/Month</li></ul><a href="#contact" class="bp" style="display:block;text-align:center">Get Started</a></div>
+<div class="pc rv"><div class="pn">Elite</div><div class="pp">$179</div><div class="pper">per month</div><ul class="pf"><li>Everything in Pro</li><li>4 Personal Training/Month</li><li>Custom Meal Plan</li><li>Priority Class Booking</li><li>VIP Locker + Towel Service</li></ul><a href="#contact" class="bp" style="display:block;text-align:center">Get Started</a></div>
+</div>
+</div>
+</section>
+
+<section id="testimonials">
+<div class="ctr">
+<p class="sl rv">Member Stories</p>
+<h2 class="st rv">REAL RESULTS</h2>
+<div class="dv"></div>
+<div class="tg">
+<div class="tc rl">
+<div class="ts">★★★★★</div>
+<p class="tt">"Ironforge completely transformed my life. In 6 months I lost 18kg and gained confidence I never had. The trainers genuinely care about your progress. Best investment I've ever made."</p>
+<div class="ta"><div class="tav"><svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" fill="#1a0505"/><circle cx="25" cy="20" r="10" fill="#e63946" opacity=".7"/><ellipse cx="25" cy="42" rx="16" ry="10" fill="#e63946" opacity=".5"/><text x="25" y="25" text-anchor="middle" fill="#fff" font-family="Arial Black,sans-serif" font-size="12" font-weight="900">AM</text></svg></div><div><div class="tn">Arjun Mehta</div><div class="tr">Member Since 2022</div></div></div>
+</div>
+<div class="tc rv">
+<div class="ts">★★★★★</div>
+<p class="tt">"The yoga and cardio classes are outstanding. I came in stressed and unfit. Now I feel incredible every single day. The facility is always spotless and the trainers are always professional."</p>
+<div class="ta"><div class="tav"><svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" fill="#050d1a"/><circle cx="25" cy="20" r="10" fill="#3b82f6" opacity=".7"/><ellipse cx="25" cy="42" rx="16" ry="10" fill="#3b82f6" opacity=".5"/><text x="25" y="25" text-anchor="middle" fill="#fff" font-family="Arial Black,sans-serif" font-size="12" font-weight="900">PS</text></svg></div><div><div class="tn">Priya Shah</div><div class="tr">Member Since 2023</div></div></div>
+</div>
+<div class="tc rr">
+<div class="ts">★★★★★</div>
+<p class="tt">"Elite membership is worth every rupee. My trainer built me a complete program and I competed in my first powerlifting meet 8 months after joining. Incredible gym, incredible community."</p>
+<div class="ta"><div class="tav"><svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" fill="#0a0d05"/><circle cx="25" cy="20" r="10" fill="#22c55e" opacity=".7"/><ellipse cx="25" cy="42" rx="16" ry="10" fill="#22c55e" opacity=".5"/><text x="25" y="25" text-anchor="middle" fill="#fff" font-family="Arial Black,sans-serif" font-size="12" font-weight="900">VP</text></svg></div><div><div class="tn">Vikram Patel</div><div class="tr">Elite Member Since 2021</div></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="faq">
+<div class="ctr">
+<p class="sl rv">Got Questions?</p>
+<h2 class="st rv">FAQ</h2>
+<div class="dv"></div>
+<div class="fl">
+<div class="fi rv"><button class="fq" onclick="toggleFaq(this)">What are your gym timings? <span class="fic">+</span></button><div class="fa"><p>We are open Monday to Saturday 5AM to 11PM and Sunday 8AM to 8PM. Our team is available throughout these hours to assist you.</p></div></div>
+<div class="fi rv"><button class="fq" onclick="toggleFaq(this)">Do you offer trial sessions? <span class="fic">+</span></button><div class="fa"><p>Yes! We offer one completely free trial session for all new members with no commitment required. Come in, meet our team, and experience the Ironforge difference before deciding.</p></div></div>
+<div class="fi rv"><button class="fq" onclick="toggleFaq(this)">What equipment is available? <span class="fic">+</span></button><div class="fa"><p>We have state-of-the-art cardio machines, free weights, resistance machines, cable systems, rowing machines, a dedicated yoga studio, and a full functional training area — everything under one roof.</p></div></div>
+<div class="fi rv"><button class="fq" onclick="toggleFaq(this)">Do you have personal trainers? <span class="fic">+</span></button><div class="fa"><p>Yes, all 15 of our certified trainers are available for personal one-on-one coaching. They create fully customised programs based on your goals, fitness level, and schedule.</p></div></div>
+<div class="fi rv"><button class="fq" onclick="toggleFaq(this)">Is parking available? <span class="fic">+</span></button><div class="fa"><p>Yes! We provide free dedicated parking for all members and visitors. No need to worry about parking when you come in for your workout.</p></div></div>
+<div class="fi rv"><button class="fq" onclick="toggleFaq(this)">How do I cancel my membership? <span class="fic">+</span></button><div class="fa"><p>You can cancel anytime with 30 days notice by visiting our front desk or calling +1 (212) 555-0142. No questions asked and no hidden cancellation fees.</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="bmi">
+<div class="ctr" style="text-align:center">
+<p class="sl rv">Free Tool</p>
+<h2 class="st rv">BMI CALCULATOR</h2>
+<div class="dv" style="margin:0 auto 45px"></div>
+<div class="bmc rv">
+<p style="color:var(--t2);margin-bottom:22px;font-size:.9rem">Enter your details to find your Body Mass Index and start your fitness journey the right way.</p>
+<div class="bmi">
+<div class="bf"><label>Height (cm)</label><input type="number" id="bh" placeholder="e.g. 175" min="100" max="250"></div>
+<div class="bf"><label>Weight (kg)</label><input type="number" id="bw" placeholder="e.g. 70" min="30" max="300"></div>
+</div>
+<button class="bp" style="width:100%;border:none" onclick="calcBMI()">Calculate BMI</button>
+<div id="br"><div class="bv" id="bval">--</div><div class="bc" id="bcat">--</div><p style="color:var(--t2);font-size:.82rem;margin-top:10px">Join Ironforge today and start improving your score.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="ctr">
+<p class="sl rv">Get In Touch</p>
+<h2 class="st rv">START YOUR JOURNEY</h2>
+<div class="dv"></div>
+<div class="cg">
+<div class="rl">
+<h3 class="ch3">VISIT US TODAY</h3>
+<div class="ci"><span class="cic">📍</span><div><div class="clb">Address</div><div class="cv">250 W 34th St, Suite 4<br>Midtown Manhattan, New York, NY 10119</div></div></div>
+<div class="ci"><span class="cic">📞</span><div><div class="clb">Phone</div><div class="cv"><a href="tel:+12125550142" style="color:var(--t2);text-decoration:none">+1 (212) 555-0142</a></div></div></div>
+<div class="ci"><span class="cic">✉️</span><div><div class="clb">Email</div><div class="cv">info@ironforgegym.com</div></div></div>
+<div class="ci"><span class="cic">🕐</span><div><div class="clb">Hours</div><div class="cv">Mon–Sat: 5AM – 11PM<br>Sunday: 8AM – 8PM</div></div></div>
+</div>
+<div class="rr">
+<form class="cf" id="cf" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="a77d932f-ac03-487e-9b1d-fc3a05732cd2">
+<input type="hidden" name="subject" value="New Gym Website Inquiry — Ironforge">
+<input type="hidden" name="redirect" value="false">
+<div class="fg"><input type="text" name="name" placeholder="Full Name" required></div>
+<div class="fg"><input type="email" name="email" placeholder="Email Address" required></div>
+<div class="fg"><input type="tel" name="phone" placeholder="Phone Number"></div>
+<div class="fg"><textarea name="message" placeholder="Your Message or Query" required></textarea></div>
+<button type="submit" class="bp" id="fb" style="border:none;width:100%">Send Message</button>
+<div id="fs">✅ Thank you! We will contact you within 24 hours.</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<section id="map" style="padding:0">
+<div class="mh"><p class="sl">Find Us</p><h2 class="st">OUR LOCATION</h2></div>
+<iframe class="mf" id="gym-map-frame" src="https://maps.google.com/maps?q=250+W+34th+St+New+York+NY+10119&output=embed" allowfullscreen loading="lazy" title="Ironforge Gym Location"></iframe>
+<a id="gym-directions-btn" href="https://maps.google.com/?q=250+W+34th+St+New+York+NY+10119" target="_blank" rel="noopener" class="bp" style="display:inline-block;margin:16px auto;text-align:center;max-width:220px">🗺️ Get Directions</a>
+</section>
+
+<footer id="footer">
+<div class="fgr">
+<div>
+<a href="#home" class="logo" style="font-size:2rem;display:block;margin-bottom:12px">IRON<span>FORGE</span></a>
+<p class="fd">New York City's premier fitness destination. Transform your body, strengthen your mind, and unleash your true potential.</p>
+<div class="fso">
+<a href="#" class="sb2"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+<a href="#" class="sb2"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="#1a1a1a" d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="1" fill="#1a1a1a"/></svg></a>
+<a href="#" class="sb2"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a1a1a"/></svg></a>
+<a href="https://wa.me/12125550142" class="sb2"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+</div>
+</div>
+<div>
+<div class="ftt">Quick Links</div>
+<ul class="fli"><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#schedule">Class Schedule</a></li><li><a href="#pricing">Membership</a></li><li><a href="#contact">Contact</a></li></ul>
+</div>
+<div>
+<div class="ftt">Contact Us</div>
+<ul class="fli"><li><a href="tel:+12125550142">+1 (212) 555-0142</a></li><li><a href="mailto:info@ironforgegym.com">info@ironforgegym.com</a></li><li><a href="#map">Midtown Manhattan, NYC</a></li><li><a href="#map">New York, NY 10119</a></li><li><a href="#schedule">Mon–Sat: 5AM–11PM</a></li><li><a href="#schedule">Sunday: 8AM–8PM</a></li></ul>
+</div>
+</div>
+<div class="fb2"><p>© 2025 Ironforge Gym, New York City. All rights reserved.</p><p style="color:var(--r)">250 W 34th St, Midtown Manhattan, NY 10119</p></div>
+</footer>
+
+<a id="wa" href="https://wa.me/12125550142" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="wat">Chat With Us</span><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+<a id="gym-instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram" style="display:none;position:fixed;bottom:95px;left:25px;width:44px;height:44px;background:radial-gradient(circle at 30% 107%,#fdf497,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);border-radius:50%;z-index:997;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,.3)"><svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.35 3.9 3.87 2.35 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.85a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg></a>
+<button id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+<script>
+var lbData={weights:{ico:'🏋️',lbl:'FREE WEIGHTS'},cardio:{ico:'🏃',lbl:'CARDIO ZONE'},interior:{ico:'🏢',lbl:'GYM INTERIOR'},training:{ico:'💪',lbl:'WEIGHT TRAINING'},personal:{ico:'🎯',lbl:'PERSONAL TRAINING'},functional:{ico:'⚡',lbl:'FUNCTIONAL ZONE'}};
+window.addEventListener('load',function(){setTimeout(function(){document.getElementById('ls').classList.add('h');},2100);});
+window.addEventListener('scroll',function(){
+var n=document.getElementById('nav');
+window.scrollY>60?n.classList.add('sc'):n.classList.remove('sc');
+var s=document.getElementById('st');
+window.scrollY>320?s.classList.add('v'):s.classList.remove('v');
+updateNav();
+});
+function toggleMenu(){document.getElementById('mm').classList.toggle('o');document.getElementById('hbg').classList.toggle('o');document.body.classList.toggle('menu-open');}
+function closeMenu(){document.getElementById('mm').classList.remove('o');document.getElementById('hbg').classList.remove('o');document.body.classList.remove('menu-open');}
+function updateNav(){var ids=['home','about','gallery','services','schedule','pricing','testimonials','faq','bmi','contact'];var links=document.querySelectorAll('.nl a');var cur='home';ids.forEach(function(id){var el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-120)cur=id;});links.forEach(function(l){l.classList.remove('on');if(l.getAttribute('href')==='#'+cur)l.classList.add('on');});}
+function animCounter(el){var t=parseInt(el.getAttribute('data-target'));var c=0,step=t/80;var tm=setInterval(function(){c+=step;if(c>=t){c=t;clearInterval(tm);}el.textContent=Math.floor(c)+(t>=100?'+':'');},22);}
+var ro=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('v');ro.unobserve(x.target);}});},{threshold:.12});
+var co=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){animCounter(x.target);co.unobserve(x.target);}});},{threshold:.5});
+document.querySelectorAll('.rv,.rl,.rr').forEach(function(el){ro.observe(el);});
+document.querySelectorAll('.counter').forEach(function(el){co.observe(el);});
+function openLb(key){var d=lbData[key];document.getElementById('lb-ico').textContent=d.ico;document.getElementById('lb-lbl').textContent=d.lbl;document.getElementById('lb').classList.add('a');document.body.style.overflow='hidden';}
+function closeLb(){document.getElementById('lb').classList.remove('a');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeLb();}});
+function toggleFaq(btn){var item=btn.parentElement;var icon=btn.querySelector('.fic');var isOpen=item.classList.contains('op');document.querySelectorAll('.fi').forEach(function(i){i.classList.remove('op');i.querySelector('.fic').textContent='+';});if(!isOpen){item.classList.add('op');icon.textContent='−';}}
+function calcBMI(){var h=parseFloat(document.getElementById('bh').value);var w=parseFloat(document.getElementById('bw').value);if(!h||!w||h<=0||w<=0){alert('Please enter valid height and weight.');return;}var hm=h/100;var bmi=(w/(hm*hm)).toFixed(1);var cat,col;if(bmi<18.5){cat='Underweight';col='#3498db';}else if(bmi<25){cat='Normal Weight';col='#2ecc71';}else if(bmi<30){cat='Overweight';col='#f39c12';}else{cat='Obese';col='#e74c3c';}var rv=document.getElementById('bval');var rc=document.getElementById('bcat');var rd=document.getElementById('br');rv.textContent=bmi;rv.style.color=col;rc.textContent=cat;rc.style.color=col;rd.style.display='block';}
+document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();var btn=document.getElementById('fb');btn.textContent='Sending...';btn.disabled=true;fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(this)}).then(function(r){return r.json();}).then(function(d){if(d.success){document.getElementById('fs').style.display='block';document.getElementById('cf').reset();}else{alert('Something went wrong. Please try again.');}btn.textContent='Send Message';btn.disabled=false;}).catch(function(){alert('Network error. Please call +1 (212) 555-0142.');btn.textContent='Send Message';btn.disabled=false;});});
+</script>
+
+
+<!-- ============ SHARED PITCH PARAMS — read once, used by both the chatbot config
+     below AND the hero personalization script further down. Runs synchronously
+     (not on DOMContentLoaded) so it's ready before GYM_CONFIG reads it. ============ -->
+<script>
+  window.__pitchParams = (function () {
+    var p = new URLSearchParams(window.location.search);
+    function get(name) {
+      var v = p.get(name);
+      return (v && v.trim()) ? v.trim() : null;
+    }
+    var phoneRaw = get("phone");
+    var phone = phoneRaw ? phoneRaw.replace(/\D/g, "") : null;
+    var colorRaw = get("color");
+    var color = null;
+    if (colorRaw) {
+      var hex = colorRaw.replace("#", "");
+      if (/^[0-9A-Fa-f]{6}$/.test(hex)) color = "#" + hex;
+    }
+    return {
+      gym: get("gym"),
+      city: get("city"),
+      phone: (phone && phone.length >= 8) ? phone : null,
+      color: color,
+      offer: get("offer"),
+      logo: get("logo"),
+      instagram: get("instagram"),
+      address: get("address"),
+      ownerName: get("owner"),
+      spotsLeft: get("spots")
+    };
+  })();
+</script>
+
+<!-- ============ IRONFORGE STATIC CHAT WIDGET — 100% client-side, zero backend calls ============ -->
+<script>
+  var GYM_CONFIG = {
+    name: window.__pitchParams.gym || "Ironforge Gym",
+    whatsappNumber: window.__pitchParams.phone || "12125550142",       // digits only, country code first
+    fallbackEmail: "info@ironforgegym.com",
+    themeColor: window.__pitchParams.color || "#e63946",
+    darkBg: "#0a0a0a",
+
+    pricing: [
+      { label: "Basic Membership", detail: "", price: "$59/mo" },
+      { label: "Pro Membership", detail: "(Most Popular)", price: "$99/mo" },
+      { label: "Elite Membership", detail: "", price: "$179/mo" }
+    ],
+
+    timetable: [
+      "Hours: Mon-Sat 5 AM - 11 PM, Sunday 8 AM - 8 PM",
+      "Strength 6AM & Yoga 8AM (Mon/Wed/Fri)",
+      "Personal Training 7AM (Tue/Thu)",
+      "HIIT 5PM (Tue) & 6PM (Fri), Boxing 6PM (Wed), Pilates 7PM (Thu)",
+      "All Classes 8AM-2PM (Sat), Open Gym 10AM-2PM (Sun)"
+    ],
+
+    location: {
+      address: window.__pitchParams.address || "250 W 34th St, Suite 4, Midtown Manhattan, New York, NY 10119",
+      parkingNote: "Locker rooms and mobile app access available on-site.",
+      mapsQuery: window.__pitchParams.address || "250 W 34th St, New York, NY 10119"
+    },
+
+    calculatorOptions: [
+      { label: "Basic", monthly: 59 },
+      { label: "Pro", monthly: 99 },
+      { label: "Elite Annual", monthly: 179, annualDiscount: 0.8 }
+    ],
+
+    quiz: {
+      questions: [
+        { q: "What's your main goal?", options: ["Lose Weight", "Build Muscle", "General Fitness"] },
+        { q: "How many days a week can you train?", options: ["1-2 days", "3-4 days", "5+ days"] }
+      ]
+    }
+  };
+</script>
+
+<style>
+  #ifg-launcher {
+    position: fixed; bottom: 20px; right: 20px; width: 58px; height: 58px;
+    border-radius: 50%; background: var(--ifg-primary, #e63946); color: #fff;
+    border: none; font-size: 24px; cursor: pointer; z-index: 9999;
+    box-shadow: 0 4px 14px rgba(0,0,0,.4);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .2s;
+  }
+  #ifg-launcher:hover { transform: scale(1.08); }
+  @media (max-width: 480px) {
+    #ifg-launcher { bottom: 16px; right: 16px; width: 52px; height: 52px; font-size: 20px; }
+  }
+  #ifg-window {
+    position: fixed; bottom: 90px; right: 20px; width: 350px; max-width: 92vw;
+    height: 500px; max-height: 74vh; background: var(--ifg-dark, #0a0a0a);
+    border: 1px solid #2a2a2a; border-radius: 14px; display: none;
+    flex-direction: column; overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,.5); z-index: 9998;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  #ifg-header {
+    background: var(--ifg-primary, #e63946); color: #fff; padding: 14px 16px;
+    font-weight: 700; font-size: 15px;
+  }
+  #ifg-header small { display: block; font-weight: 400; font-size: 11px; opacity: .9; margin-top: 2px; }
+  #ifg-messages { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .ifg-msg {
+    max-width: 84%; padding: 9px 12px; border-radius: 12px; font-size: 14px;
+    line-height: 1.45; white-space: pre-wrap;
+  }
+  .ifg-msg.bot { background: #1c1c1c; color: #eee; align-self: flex-start; border-bottom-left-radius: 2px; }
+  .ifg-msg.user { background: var(--ifg-primary, #e63946); color: #fff; align-self: flex-end; border-bottom-right-radius: 2px; }
+  .ifg-quick { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 12px 10px; }
+  .ifg-quick button {
+    background: transparent; border: 1px solid var(--ifg-primary, #e63946);
+    color: var(--ifg-primary, #e63946); border-radius: 14px; font-size: 12px;
+    padding: 6px 11px; cursor: pointer;
+  }
+  .ifg-quick button:hover { background: var(--ifg-primary, #e63946); color: #fff; }
+  .ifg-action-link {
+    display: inline-block; margin-top: 6px; background: var(--ifg-primary, #e63946);
+    color: #fff; text-decoration: none; padding: 7px 12px; border-radius: 8px;
+    font-size: 12px; font-weight: 700; align-self: flex-start;
+  }
+  #ifg-inputbar { display: flex; border-top: 1px solid #2a2a2a; padding: 8px; gap: 6px; }
+  #ifg-inputbar input {
+    flex: 1; background: #1c1c1c; border: 1px solid #333; color: #fff;
+    border-radius: 8px; padding: 9px 10px; font-size: 14px; outline: none;
+  }
+  #ifg-inputbar button {
+    background: var(--ifg-primary, #e63946); color: #fff; border: none;
+    border-radius: 8px; padding: 0 14px; font-weight: 700; cursor: pointer;
+  }
+</style>
+
+<script>
+(function () {
+  "use strict";
+  var cfg = GYM_CONFIG;
+  document.documentElement.style.setProperty("--ifg-primary", cfg.themeColor);
+  document.documentElement.style.setProperty("--ifg-dark", cfg.darkBg);
+
+  var launcher = document.createElement("button");
+  launcher.id = "ifg-launcher";
+  launcher.setAttribute("aria-label", "Chat with us");
+  var IFG_ICON_DUMBBELL = '<svg width="26" height="26" viewBox="0 0 24 24"><rect x="1" y="9" width="3" height="6" rx="1" fill="#fff"/><rect x="4" y="10.3" width="2" height="3.4" fill="#fff"/><rect x="6" y="11" width="12" height="2" rx="0.5" fill="#fff"/><rect x="18" y="10.3" width="2" height="3.4" fill="#fff"/><rect x="20" y="9" width="3" height="6" rx="1" fill="#fff"/></svg>';
+  launcher.innerHTML = IFG_ICON_DUMBBELL;
+  document.body.appendChild(launcher);
+
+  var win = document.createElement("div");
+  win.id = "ifg-window";
+  win.innerHTML =
+    '<div id="ifg-header">🏋️ ' + esc(cfg.name) + '</div>' +
+    '<div id="ifg-messages"></div>' +
+    '<div class="ifg-quick" id="ifg-quick-row"></div>' +
+    '<div id="ifg-inputbar"><input id="ifg-input" type="text" placeholder="Type a message..." />' +
+    '<button id="ifg-send">➤</button></div>';
+  document.body.appendChild(win);
+
+  var messagesEl = document.getElementById("ifg-messages");
+  var isOpen = false, flowState = null;
+
+  launcher.addEventListener("click", function () {
+    isOpen = !isOpen;
+    win.style.display = isOpen ? "flex" : "none";
+    launcher.innerHTML = isOpen ? "✕" : IFG_ICON_DUMBBELL;
+  });
+
+  document.getElementById("ifg-send").addEventListener("click", sendCurrentInput);
+  document.getElementById("ifg-input").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") sendCurrentInput();
+  });
+
+  renderQuickButtons();
+  pushMessage("bot", "Hey! 👋 Welcome to " + cfg.name + ". Check out our pricing, class times, or claim your free trial below! 💪");
+
+  function esc(str) { var d = document.createElement("div"); d.textContent = str; return d.innerHTML; }
+  function pushMessage(role, text) {
+    var el = document.createElement("div");
+    el.className = "ifg-msg " + (role === "user" ? "user" : "bot");
+    el.textContent = text;
+    messagesEl.appendChild(el);
+    scrollDown();
+  }
+  function pushHtmlBlock(html) {
+    var el = document.createElement("div");
+    el.className = "ifg-msg bot";
+    el.innerHTML = html;
+    messagesEl.appendChild(el);
+    scrollDown();
+  }
+  function pushActionLink(label, href, opensNewTab) {
+    var a = document.createElement("a");
+    a.className = "ifg-action-link";
+    a.href = href;
+    if (opensNewTab) { a.target = "_blank"; a.rel = "noopener"; }
+    a.textContent = label;
+    messagesEl.appendChild(a);
+    scrollDown();
+  }
+  function pushButtonRow(options, onPick) {
+    var row = document.createElement("div");
+    row.className = "ifg-quick";
+    options.forEach(function (label) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = label;
+      b.addEventListener("click", function () {
+        row.remove();
+        pushMessage("user", label);
+        onPick(label);
+      });
+      row.appendChild(b);
+    });
+    messagesEl.appendChild(row);
+    scrollDown();
+  }
+  function scrollDown() { messagesEl.scrollTop = messagesEl.scrollHeight; }
+  function whatsappLink(text) { return "https://wa.me/" + cfg.whatsappNumber + "?text=" + encodeURIComponent(text); }
+  function mailtoLink(subject, body) { return "mailto:" + cfg.fallbackEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body); }
+
+  function renderQuickButtons() {
+    var row = document.getElementById("ifg-quick-row");
+    var buttons = ["💰 Pricing", "📅 Timetable", "📍 Location", "🎟️ Free Trial", "🧮 Price Calculator", "📝 Find My Plan"];
+    row.innerHTML = "";
+    buttons.forEach(function (label) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = label;
+      b.addEventListener("click", function () { handleTopLevel(label); });
+      row.appendChild(b);
+    });
+  }
+  function handleTopLevel(label) {
+    pushMessage("user", label);
+    if (label.indexOf("Pricing") !== -1) return showPricing();
+    if (label.indexOf("Timetable") !== -1) return showTimetable();
+    if (label.indexOf("Location") !== -1) return showLocation();
+    if (label.indexOf("Free Trial") !== -1) return startLeadCapture();
+    if (label.indexOf("Calculator") !== -1) return startCalculator();
+    if (label.indexOf("Find My Plan") !== -1) return startQuiz();
+  }
+
+  function showPricing() {
+    var html = "<strong>Membership Plans:</strong><br>";
+    cfg.pricing.forEach(function (p) {
+      html += "• " + esc(p.label) + (p.detail ? " " + esc(p.detail) : "") + " — <strong>" + esc(p.price) + "</strong><br>";
+    });
+    pushHtmlBlock(html);
+    pushActionLink("🎟️ Book Free Trial", "javascript:void(0)", false);
+    wireLastLinkToLead();
+  }
+  function showTimetable() {
+    var html = "<strong>Hours & Classes:</strong><br>";
+    cfg.timetable.forEach(function (line) { html += "• " + esc(line) + "<br>"; });
+    pushHtmlBlock(html);
+  }
+  function showLocation() {
+    var html = "<strong>Find Us:</strong><br>📍 " + esc(cfg.location.address) + "<br>ℹ️ " + esc(cfg.location.parkingNote);
+    pushHtmlBlock(html);
+    var mapsUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(cfg.location.mapsQuery);
+    pushActionLink("🗺️ Get Directions", mapsUrl, true);
+  }
+  function startLeadCapture() {
+    flowState = { type: "lead", step: "name", name: "", phone: "" };
+    pushMessage("bot", "Awesome! 🎉 What's your name?");
+  }
+  function continueLeadCapture(text) {
+    if (flowState.step === "name") {
+      flowState.name = text;
+      flowState.step = "phone";
+      pushMessage("bot", "Nice to meet you, " + text + "! What's the best phone number to reach you?");
+      return;
+    }
+    if (flowState.step === "phone") {
+      flowState.phone = text;
+      var msg = "Hi, I'm " + flowState.name + ". I'd like to claim my free trial pass at " + cfg.name + ". My phone number is " + flowState.phone + ".";
+      pushMessage("bot", "Perfect — tap below to send that straight to us on WhatsApp (or email if you prefer):");
+      pushActionLink("📱 Send via WhatsApp", whatsappLink(msg), true);
+      pushActionLink("✉️ Send via Email instead", mailtoLink("Free Trial Request", msg), false);
+      flowState = null;
+    }
+  }
+  function startCalculator() {
+    pushMessage("bot", "Pick a plan to see your cost:");
+    pushButtonRow(cfg.calculatorOptions.map(function (o) { return o.label; }), function (label) {
+      var opt = cfg.calculatorOptions.filter(function (o) { return o.label === label; })[0];
+      if (opt.annualDiscount) {
+        var annualTotal = Math.round(opt.monthly * 12 * opt.annualDiscount);
+        pushMessage("bot", opt.label + ": $" + opt.monthly + "/mo billed annually at 20% off = $" + annualTotal + "/year total.");
+      } else {
+        pushMessage("bot", opt.label + " plan: $" + opt.monthly + "/mo.");
+      }
+      pushActionLink("🎟️ Book Free Trial", "javascript:void(0)", false);
+      wireLastLinkToLead();
+    });
+  }
+  function startQuiz() {
+    flowState = { type: "quiz", step: 0, answers: [] };
+    askQuizQuestion();
+  }
+  function askQuizQuestion() {
+    var q = cfg.quiz.questions[flowState.step];
+    pushMessage("bot", q.q);
+    pushButtonRow(q.options, function (answer) {
+      flowState.answers.push(answer);
+      flowState.step++;
+      if (flowState.step < cfg.quiz.questions.length) {
+        askQuizQuestion();
+      } else {
+        finishQuiz(flowState.answers);
+        flowState = null;
+      }
+    });
+  }
+  function finishQuiz(answers) {
+    var goal = answers[0], freq = answers[1];
+    var recommendation;
+    if (freq === "5+ days") {
+      recommendation = "Elite Membership — $179/mo. Training that often, you'll want full PT access and priority booking.";
+    } else if (freq === "3-4 days") {
+      recommendation = "Pro Membership — $99/mo, our most popular plan for consistent training.";
+    } else {
+      recommendation = "Basic Membership — $59/mo is a great starting point for your goals.";
+    }
+    pushMessage("bot", "Based on your answers, I'd recommend: " + recommendation);
+    pushActionLink("🎟️ Book Free Trial", "javascript:void(0)", false);
+    wireLastLinkToLead();
+  }
+  function wireLastLinkToLead() {
+    var links = messagesEl.querySelectorAll(".ifg-action-link");
+    links[links.length - 1].addEventListener("click", function (e) { e.preventDefault(); startLeadCapture(); });
+  }
+  function sendCurrentInput() {
+    var input = document.getElementById("ifg-input");
+    var text = input.value.trim();
+    if (!text) return;
+    input.value = "";
+    pushMessage("user", text);
+    if (flowState && flowState.type === "lead") { continueLeadCapture(text); return; }
+    pushMessage("bot", "Thanks for reaching out! To get instant assistance or claim your free trial, tap one of the quick options above or chat with us directly on WhatsApp!");
+    pushActionLink("💬 Chat on WhatsApp", whatsappLink("Hi! I have a question about " + cfg.name + "."), true);
+  }
+})();
+</script>
+
+<!-- ===== PITCH PERSONALIZATION — reads ?gym=&city=&phone=&color=&offer=&logo=&instagram=&address=&owner=&spots= from the URL =====
+     Full example:
+     yoursite.github.io/?gym=Titan%20Fitness&city=Dubai&phone=971501234567&color=ff6b00&offer=3-Day%20Free%20Trial&instagram=titanfitness&address=Marina%20Walk%2C%20Dubai&owner=Ahmed&spots=5
+     If a param is missing, that piece of the page just keeps its normal default — nothing looks broken.
+     (gym/phone/color are already applied to the chatbot via GYM_CONFIG above — this script
+     handles everything visible on the main page itself, using the same shared params.) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var pp = window.__pitchParams || {};
+
+  // ---- 1. Business name ----
+  if (pp.gym) {
+    var titleEl = document.getElementById("gym-title");
+    if (titleEl) titleEl.textContent = pp.gym;
+    var navLogoText = document.getElementById("nav-logo-text");
+    if (navLogoText && !pp.logo) navLogoText.textContent = pp.gym;
+  }
+
+  // ---- 1b. Logo image (falls back cleanly to text logo if URL is missing or broken) ----
+  if (pp.logo) {
+    var logoImg = document.getElementById("gym-logo-img");
+    var logoText = document.getElementById("nav-logo-text");
+    if (logoImg) {
+      logoImg.onerror = function () {
+        logoImg.style.display = "none";
+        if (logoText) logoText.style.display = "inline";
+      };
+      logoImg.onload = function () {
+        logoImg.style.display = "inline-block";
+        if (logoText) logoText.style.display = "none";
+      };
+      logoImg.src = pp.logo;
+    }
+  }
+
+  // ---- 4. City / neighborhood ----
+  if (pp.city) {
+    var locEl = document.getElementById("gym-location");
+    if (locEl) locEl.textContent = pp.city + "'s Premier Fitness Destination";
+  }
+
+  // ---- 5. Custom offer badge ----
+  if (pp.offer) {
+    var offerEl = document.getElementById("gym-offer");
+    if (offerEl) {
+      offerEl.textContent = "🎉 " + pp.offer;
+      offerEl.style.display = "block";
+    }
+  }
+
+  // ---- 9. Urgency banner (reuses the existing top promo bar) ----
+  if (pp.spotsLeft || pp.city) {
+    var urgencyEl = document.getElementById("gym-urgency");
+    if (urgencyEl && pp.spotsLeft) {
+      var cityText = pp.city || "your area";
+      urgencyEl.textContent = "🔥 Only " + pp.spotsLeft + " Free Trial Passes Left for " + cityText + "!";
+    }
+  }
+
+  // ---- 3 & 10. WhatsApp CTA with pre-filled message ----
+  if (pp.phone) {
+    var waBtn = document.getElementById("wa");
+    if (waBtn) {
+      var msg = "Hi " + (pp.gym || "there") + ", I want to claim the trial pass";
+      waBtn.href = "https://wa.me/" + pp.phone + "?text=" + encodeURIComponent(msg);
+    }
+  }
+
+  // ---- 2. Accent color — one CSS variable reskins every themed element site-wide ----
+  if (pp.color) {
+    document.documentElement.style.setProperty("--r", pp.color);
+  }
+
+  // ---- 6. Instagram ----
+  if (pp.instagram) {
+    var igBtn = document.getElementById("gym-instagram");
+    if (igBtn) {
+      var handle = pp.instagram.replace(/^https?:\/\/(www\.)?instagram\.com\//i, "").replace(/^@/, "").replace(/\/$/, "");
+      igBtn.href = "https://instagram.com/" + encodeURIComponent(handle);
+      igBtn.style.display = "flex";
+    }
+  }
+
+  // ---- 7. Google Maps location ----
+  if (pp.address) {
+    var mapFrame = document.getElementById("gym-map-frame");
+    if (mapFrame) mapFrame.src = "https://maps.google.com/maps?q=" + encodeURIComponent(pp.address) + "&output=embed";
+    var dirBtn = document.getElementById("gym-directions-btn");
+    if (dirBtn) dirBtn.href = "https://maps.google.com/?q=" + encodeURIComponent(pp.address);
+  }
+
+  // ---- 8. Owner greeting (demo-only banner, not shown to real site visitors later) ----
+  if (pp.ownerName) {
+    var greetBanner = document.getElementById("pitch-greeting");
+    var greetText = document.getElementById("pitch-greeting-text");
+    if (greetBanner && greetText) {
+      greetText.textContent = "👋 Hey " + pp.ownerName + ", here's your customized preview!";
+      greetBanner.style.display = "block";
+    }
+  }
+});
+</script>
+</body>
+</html>
