@@ -977,5 +977,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
+     <!-- Custom URL Theme Script -->
+<script>
+  // 1. Grab the URL query parameters (everything after the '?')
+  const params = new URLSearchParams(window.location.search);
+
+  // 2. Read parameters like ?bg=121212 or ?accent=ff0000 or ?text=ffffff
+  const bg = params.get('bg');
+  const accent = params.get('accent');
+  const text = params.get('text');
+
+  // 3. Apply custom colors to your CSS variables
+  if (bg) {
+    document.documentElement.style.setProperty('--bg', '#' + bg);
+  }
+  if (accent) {
+    document.documentElement.style.setProperty('--r', '#' + accent);
+  }
+  if (text) {
+    document.documentElement.style.setProperty('--t', '#' + text);
+  }
+</script>
+     
 </body>
 </html>
