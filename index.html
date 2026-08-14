@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <script>
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    const bg = params.get('bg');
+    const text = params.get('text');
+    const accent = params.get('accent');
+
+    // 1. Instantly inject CSS rules to update the Preloader styling
+    const style = document.createElement('style');
+    let cssRules = '';
+
+    if (bg) cssRules += `#loader, .loader, .preloader { background-color: #${bg} !important; } `;
+    if (text) cssRules += `#loader, .loader, .preloader { color: #${text} !important; } `;
+    if (accent) cssRules += `#loader span, .loader-text { color: #${accent} !important; } `;
+
+    style.innerHTML = cssRules;
+    document.head.appendChild(style);
+
+    // 2. Override Preloader Text as soon as the element appears
+    if (name) {
+      document.title = name;
+      const observer = new MutationObserver(() => {
+        // Targets common preloader text elements
+        const loaderEls = document.querySelectorAll('#loader, .loader, .preloader, .loader-text, #loader-title');
+        loaderEls.forEach(el => {
+          if (el.textContent.includes('Ironforge')) {
+            el.textContent = el.textContent.replace(/Ironforge(\s*Gym)?/gi, name);
+          }
+        });
+      });
+      observer.observe(document, { childList: true, subtree: true });
+    }
+  })();
+     </script>
+     
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IRONFORGE GYM | Unleash Your Potential — New York City</title>
@@ -981,31 +1017,26 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
 
-    const name = params.get('name') || "Highbury Leisure Centre";
-    const address = params.get('address') || "Highbury Crescent, Islington, London N5 1RR";
-    const bg = params.get('bg') || "ffffff";
-    const text = params.get('text') || "111111";
-    const accent = params.get('accent') || "2e7d32";
+    const name = params.get('name');
+    const address = params.get('address');
+    const bg = params.get('bg');
+    const text = params.get('text');
+    const accent = params.get('accent');
 
-    // 1. Force White Background & Clean Up Dark Overlays/Gradients
-    document.body.style.setProperty('background', '#' + bg, 'important');
-    document.body.style.setProperty('color', '#' + text, 'important');
-    
-    // Override root CSS variables
-    document.documentElement.style.setProperty('--bg', '#' + bg);
-    document.documentElement.style.setProperty('--bg2', '#f4f9f4');
-    document.documentElement.style.setProperty('--t', '#' + text);
-    document.documentElement.style.setProperty('--r', '#' + accent);
+    // Force global colors
+    if (bg) {
+      document.documentElement.style.setProperty('--bg', '#' + bg);
+      document.body.style.setProperty('background', '#' + bg, 'important');
+    }
+    if (text) {
+      document.documentElement.style.setProperty('--t', '#' + text);
+      document.body.style.setProperty('color', '#' + text, 'important');
+    }
+    if (accent) {
+      document.documentElement.style.setProperty('--r', '#' + accent);
+    }
 
-    // Remove dark linear-gradients on section backgrounds
-    document.querySelectorAll('*').forEach(el => {
-      const style = window.getComputedStyle(el);
-      if (style.backgroundImage.includes('linear-gradient')) {
-        el.style.backgroundImage = 'none';
-      }
-    });
-
-    // 2. Helper function to replace text safely across nodes
+    // Helper for page text replacement
     function replaceTextOnPage(oldText, newText) {
       if (!newText) return;
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
@@ -1017,27 +1048,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // 3. Fix Location & Name Text
-    document.title = name;
-    
-    // Replace old gym names
-    replaceTextOnPage("Ironforge Gym", name);
-    replaceTextOnPage("Ironforge", name);
+    if (name) {
+      replaceTextOnPage("Ironforge Gym", name);
+      replaceTextOnPage("Ironforge", name);
+    }
 
-    // Replace old city references to avoid awkward "'S PREMIER" phrases
-    replaceTextOnPage("New York City", "London");
-    replaceTextOnPage("Midtown Manhattan's", "Islington's");
-    replaceTextOnPage("Midtown Manhattan", "Islington");
-
-    // Clean up specific header sub-text directly
-    document.querySelectorAll('p, span, h2, h3, h4').forEach(el => {
-      if (el.textContent.includes("'S PREMIER FITNESS DESTINATION")) {
-        el.textContent = `${name.toUpperCase()} – ISLINGTON'S PREMIER FITNESS DESTINATION`;
-      }
-    });
+    if (address) {
+      replaceTextOnPage("New York City", address);
+      replaceTextOnPage("Midtown Manhattan's", "Islington's");
+      replaceTextOnPage("Midtown Manhattan", "Islington");
+    }
   });
      </script>
-     
      
 </body>
 </html>
