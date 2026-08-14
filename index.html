@@ -981,22 +981,31 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
 
-    const name = params.get('name');
-    const address = params.get('address');
-    const bg = params.get('bg');
-    const text = params.get('text');
-    const accent = params.get('accent');
+    const name = params.get('name') || "Highbury Leisure Centre";
+    const address = params.get('address') || "Highbury Crescent, Islington, London N5 1RR";
+    const bg = params.get('bg') || "ffffff";
+    const text = params.get('text') || "111111";
+    const accent = params.get('accent') || "2e7d32";
 
-    // 1. Force Colors Everywhere
-    if (bg) document.body.style.setProperty('background-color', '#' + bg, 'important');
-    if (text) document.body.style.setProperty('color', '#' + text, 'important');
+    // 1. Force White Background & Clean Up Dark Overlays/Gradients
+    document.body.style.setProperty('background', '#' + bg, 'important');
+    document.body.style.setProperty('color', '#' + text, 'important');
     
-    // Override CSS variables just in case
-    if (bg) document.documentElement.style.setProperty('--bg', '#' + bg);
-    if (text) document.documentElement.style.setProperty('--t', '#' + text);
-    if (accent) document.documentElement.style.setProperty('--r', '#' + accent);
+    // Override root CSS variables
+    document.documentElement.style.setProperty('--bg', '#' + bg);
+    document.documentElement.style.setProperty('--bg2', '#f4f9f4');
+    document.documentElement.style.setProperty('--t', '#' + text);
+    document.documentElement.style.setProperty('--r', '#' + accent);
 
-    // 2. Text Search & Replace (Finds and replaces old text everywhere)
+    // Remove dark linear-gradients on section backgrounds
+    document.querySelectorAll('*').forEach(el => {
+      const style = window.getComputedStyle(el);
+      if (style.backgroundImage.includes('linear-gradient')) {
+        el.style.backgroundImage = 'none';
+      }
+    });
+
+    // 2. Helper function to replace text safely across nodes
     function replaceTextOnPage(oldText, newText) {
       if (!newText) return;
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
@@ -1008,17 +1017,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    if (name) {
-      document.title = name;
-      replaceTextOnPage("Ironforge Gym", name);
-      replaceTextOnPage("Ironforge", name);
-    }
+    // 3. Fix Location & Name Text
+    document.title = name;
+    
+    // Replace old gym names
+    replaceTextOnPage("Ironforge Gym", name);
+    replaceTextOnPage("Ironforge", name);
 
-    if (address) {
-      replaceTextOnPage("New York City", address);
-    }
+    // Replace old city references to avoid awkward "'S PREMIER" phrases
+    replaceTextOnPage("New York City", "London");
+    replaceTextOnPage("Midtown Manhattan's", "Islington's");
+    replaceTextOnPage("Midtown Manhattan", "Islington");
+
+    // Clean up specific header sub-text directly
+    document.querySelectorAll('p, span, h2, h3, h4').forEach(el => {
+      if (el.textContent.includes("'S PREMIER FITNESS DESTINATION")) {
+        el.textContent = `${name.toUpperCase()} – ISLINGTON'S PREMIER FITNESS DESTINATION`;
+      }
+    });
   });
      </script>
+     
      
 </body>
 </html>
