@@ -977,27 +977,38 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
-     <!-- Custom URL Theme Script -->
-<script>
-  // 1. Grab the URL query parameters (everything after the '?')
+     <script>
   const params = new URLSearchParams(window.location.search);
 
-  // 2. Read parameters like ?bg=121212 or ?accent=ff0000 or ?text=ffffff
+  // 1. Get values from the link
+  const name = params.get('name');
+  const address = params.get('address');
   const bg = params.get('bg');
-  const accent = params.get('accent');
   const text = params.get('text');
+  const accent = params.get('accent');
 
-  // 3. Apply custom colors to your CSS variables
-  if (bg) {
-    document.documentElement.style.setProperty('--bg', '#' + bg);
+  // 2. Change colors if present
+  if (bg) document.documentElement.style.setProperty('--bg', '#' + bg);
+  if (text) document.documentElement.style.setProperty('--t', '#' + text);
+  if (accent) document.documentElement.style.setProperty('--r', '#' + accent);
+
+  // 3. Update Gym Name on the page if present
+  if (name) {
+    document.title = name; // Updates browser tab title
+    // Replaces all instances of the old header name on the page
+    document.querySelectorAll('h1, .logo, header').forEach(el => {
+      if (el.children.length === 0) el.textContent = name;
+    });
   }
-  if (accent) {
-    document.documentElement.style.setProperty('--r', '#' + accent);
+
+  // 4. Update Address on the page if present
+  if (address) {
+    // Finds location/address tags or footer text and updates them
+    document.querySelectorAll('.address, .location, footer p').forEach(el => {
+      el.textContent = address;
+    });
   }
-  if (text) {
-    document.documentElement.style.setProperty('--t', '#' + text);
-  }
-</script>
-     
+     </script>
+       
 </body>
 </html>
