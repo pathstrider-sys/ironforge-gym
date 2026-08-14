@@ -978,37 +978,47 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
      <script>
-  const params = new URLSearchParams(window.location.search);
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
 
-  // 1. Get values from the link
-  const name = params.get('name');
-  const address = params.get('address');
-  const bg = params.get('bg');
-  const text = params.get('text');
-  const accent = params.get('accent');
+    const name = params.get('name');
+    const address = params.get('address');
+    const bg = params.get('bg');
+    const text = params.get('text');
+    const accent = params.get('accent');
 
-  // 2. Change colors if present
-  if (bg) document.documentElement.style.setProperty('--bg', '#' + bg);
-  if (text) document.documentElement.style.setProperty('--t', '#' + text);
-  if (accent) document.documentElement.style.setProperty('--r', '#' + accent);
+    // 1. Force Colors Everywhere
+    if (bg) document.body.style.setProperty('background-color', '#' + bg, 'important');
+    if (text) document.body.style.setProperty('color', '#' + text, 'important');
+    
+    // Override CSS variables just in case
+    if (bg) document.documentElement.style.setProperty('--bg', '#' + bg);
+    if (text) document.documentElement.style.setProperty('--t', '#' + text);
+    if (accent) document.documentElement.style.setProperty('--r', '#' + accent);
 
-  // 3. Update Gym Name on the page if present
-  if (name) {
-    document.title = name; // Updates browser tab title
-    // Replaces all instances of the old header name on the page
-    document.querySelectorAll('h1, .logo, header').forEach(el => {
-      if (el.children.length === 0) el.textContent = name;
-    });
-  }
+    // 2. Text Search & Replace (Finds and replaces old text everywhere)
+    function replaceTextOnPage(oldText, newText) {
+      if (!newText) return;
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+      let node;
+      while (node = walker.nextNode()) {
+        if (node.nodeValue.includes(oldText)) {
+          node.nodeValue = node.nodeValue.replace(new RegExp(oldText, 'gi'), newText);
+        }
+      }
+    }
 
-  // 4. Update Address on the page if present
-  if (address) {
-    // Finds location/address tags or footer text and updates them
-    document.querySelectorAll('.address, .location, footer p').forEach(el => {
-      el.textContent = address;
-    });
-  }
+    if (name) {
+      document.title = name;
+      replaceTextOnPage("Ironforge Gym", name);
+      replaceTextOnPage("Ironforge", name);
+    }
+
+    if (address) {
+      replaceTextOnPage("New York City", address);
+    }
+  });
      </script>
-       
+     
 </body>
 </html>
